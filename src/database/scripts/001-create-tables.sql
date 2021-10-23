@@ -4,3 +4,9 @@ CREATE TABLE "users" (
   "email" TEXT NOT NULL,
   "password" TEXT NOT NULL
 );
+
+CREATE TABLE "sessions"(
+  "id" SERIAL PRIMARY KEY,
+  "token" TEXT NOT NULL,
+  "userId" INTEGER NOT NULL
+);
