@@ -5,10 +5,7 @@ import connection from '../src/database/database.js';
 beforeAll(async () => {
     await connection.query('DELETE FROM users;');
 });
-afterAll(async () => {
-    await connection.query('DELETE FROM users;');
-    connection.end();
-});
+
 describe("POST /sign-up", () => {
 
     it("returns 201 for create user", async () => {
@@ -40,9 +37,6 @@ describe("POST /sign-up", () => {
 
 describe("POST /sign-up", () => {
     beforeAll(async () => {
-        await connection.query('DELETE FROM sessions;');
-    });
-    afterAll(async () => {
         await connection.query('DELETE FROM sessions;');
     });
 
