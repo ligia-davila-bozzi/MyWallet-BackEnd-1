@@ -10,3 +10,11 @@ CREATE TABLE "sessions"(
   "token" TEXT NOT NULL,
   "userId" INTEGER NOT NULL
 );
+
+CREATE TABLE "wallet"(
+  "id" SERIAL PRIMARY KEY,
+  "description" TEXT NOT NULL,
+  "value" NUMERIC NOT NULL,
+  "date" DATE NOT NULL,
+  "userId" INTEGER NOT NULL
+);
